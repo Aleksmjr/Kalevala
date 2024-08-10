@@ -1,12 +1,56 @@
 // медиа запросы (адаптив)
+@media screen and ( max-width: 1968px )
 
+  .header
+    &-button
+      display: none
 @media screen and ( max-width: 768px )
 
   .container
-    max-width: 729px
+    max-width: 728px
   .header
-    // &- пиши адаптив
+    &-menu
+      display: none
+    &__logo
+      max-width: 80px
+      max-height: 65px
+    &-contacts
+      display: flex
+      &__link
+        font-size: 16px
+        font-family: $manropeBold
+      &__img
+        width: 30px
+        h30px
+    &-button
+      display: flex
+      flex-direction: column
+      justify-content: space-around
+      width: 30px
+      height: 30px
+      background: transparent
+      border: none
+      cursor: pointer
+      &__line
+        width: 20px
+        height: 2px
+        background-color: #ffffff
+        &:last-child
+          width: 14px
 @media screen and ( max-width: 360px )
 
   .container
     max-width: 320px
+  .header
+    &__logo
+      width: 70px
+      height: 58px
+    &-contacts
+      display: flex
+      &__link
+        font-size: 14px
+        font-family: $manropeBold
+        margin-left: 0
+        margin-right: 0
+      &__img
+        display: none
