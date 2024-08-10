@@ -83,10 +83,42 @@ a {
   .header-button {
     display: none;
   }
+  .burger {
+    display: none;
+  }
 }
 @media screen and (max-width: 768px) {
   .container {
     max-width: 728px;
+  }
+  .burger {
+    display: block;
+  }
+  .burger-menu {
+    width: 287px;
+    height: 560px;
+  }
+  .burger-img {
+    position: absolute;
+    max-width: 100%;
+  }
+  .burger-mobile-list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 201px;
+    padding-left: 62px;
+    padding-top: 92px;
+  }
+  .burger-mobile-list__item {
+    padding-bottom: 15px;
+  }
+  .burger-mobile-list__link {
+    font-family: "Manrope-Medium", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #f2f2f2;
   }
   .header-menu {
     display: none;
