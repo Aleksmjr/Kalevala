@@ -11,13 +11,30 @@
   .container
     max-width: 728px
   .burger
+    background-image: url('/assets/img/menu-mobile.png')
+    background-repeat: no-repeat
+    background-size: cover
     display: block
     &-menu
-      width: 287px
-      height: 560px
-    &-img
-      position: absolute
-      max-width: 100%
+      position: fixed
+      top: 0px
+      right: 0
+      left: 100%
+      bottom: 0
+      transition: left .3s
+      &.open
+        left: 50%
+        & .burger-mobile-list
+          &__item
+            &:nth-child(3)
+              & .burger-mobile-list__link
+                color: $active
+            &:nth-child(2)
+              font-style: italic
+
+    // &-img
+    //   position: absolute  бред ебаной кобылы
+    //   max-width: 100%
     &-mobile
       &-list
         position: relative
@@ -48,7 +65,7 @@
         font-family: $manropeBold
       &__img
         width: 30px
-        h30px
+        height: 30px
     &-button
       display: flex
       flex-direction: column
@@ -62,8 +79,23 @@
         width: 20px
         height: 2px
         background-color: #ffffff
+        border-radius: 10px
+        transition: all .3s
         &:last-child
           width: 14px
+      &.open
+        position: absolute
+        right: 6%
+        z-index: 1
+        & .header-button__line
+          &:nth-child(1)
+            transform: rotate(45deg) translate(5px, 6px)
+          &:nth-child(2)
+            display: none
+          &:nth-child(3)
+            width: 20px
+            transform: rotate(135deg) translate(-4px, 5px)
+
 @media screen and ( max-width: 360px )
 
   .container
