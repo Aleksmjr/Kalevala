@@ -6,8 +6,43 @@
       display: none
   .burger
     display: none
+@media screen and ( max-width: 1100px )
+  .container
+    max-width: 1000px
+  .header
+    &__logo
+      max-width: 70px
+      max-height: 55px
+    &-contacts
+      display: flex
+      &__link
+        font-size: 16px
+        font-family: $manropeBold
+      &__img
+        max-width: 25px
+    &-menu
+      &-list
+        &__link
+          font-size: 16px
+@media screen and ( max-width: 845px )
+  .container
+    max-width: 770px
+  .header
+    &__logo
+      max-width: 60px
+      max-height: 45px
+    &-contacts
+      display: flex
+      &__link
+        font-size: 12px
+        font-family: $manropeBold
+      &__img
+        max-width: 20px
+    &-menu
+      &-list
+        &__link
+          font-size: 14px
 @media screen and ( max-width: 768px )
-
   .container
     max-width: 728px
   .burger
@@ -15,13 +50,42 @@
     background-repeat: no-repeat
     background-size: cover
     display: block
+    &-button
+      display: flex
+      flex-direction: column
+      justify-content: space-around
+      width: 30px
+      height: 30px
+      background: transparent
+      border: none
+      cursor: pointer
+      position: relative
+      left: 90%
+      bottom: 23%
+      & .burger-button__line
+        &:nth-child(1)
+          transform: rotate(45deg) translate(5px, 6px)
+          &:nth-child(2)
+            display: none
+          &:nth-child(3)
+            width: 20px
+            transform: rotate(135deg) translate(-4px, 5px)
+      &__line
+        width: 20px
+        height: 2px
+        background-color: #ffffff
+        border-radius: 10px
+        transition: all .3s
+        &:last-child
+          width: 14px
     &-menu
       position: fixed
       top: 0px
       right: 0
       left: 100%
       bottom: 0
-      transition: left .3s
+      transition: .3s
+      transition: .3s
       &.open
         left: 50%
         & .burger-mobile-list
@@ -83,18 +147,15 @@
         transition: all .3s
         &:last-child
           width: 14px
-      &.open
-        position: absolute
-        right: 6%
-        z-index: 1
-        & .header-button__line
-          &:nth-child(1)
-            transform: rotate(45deg) translate(5px, 6px)
-          &:nth-child(2)
-            display: none
-          &:nth-child(3)
-            width: 20px
-            transform: rotate(135deg) translate(-4px, 5px)
+
+  .burger-button__line
+    &:nth-child(1)
+      transform: rotate(45deg) translate(5px, 6px)
+    &:nth-child(2)
+      display: none
+    &:nth-child(3)
+      width: 20px
+      transform: rotate(135deg) translate(-4px, 5px)
 
 @media screen and ( max-width: 360px )
 
