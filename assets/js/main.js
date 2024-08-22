@@ -1,24 +1,20 @@
-const burgerButton = document.querySelector('.header-button');
+// тут создается переменную для кнопки бургера (header)
+const burgerBtnOpen = document.querySelector('.header-burger');
+// создается переменная для Бургер Меню
+const burgerMenu = document.querySelector('.menu-mobile');
 
-burgerButton.addEventListener('click', function () {
-  const burgerMenu = document.querySelector('.burger-menu');
-
-  burgerMenu.classList.toggle('open');
-
-  // Вот это действие у тебя ни к чему не приводит, зачем оно? Что оно делает?
-  this.classList.toggle('open');
+// Вешаем обработчик события клика на бургер (header)
+burgerBtnOpen.addEventListener('click', function () {
+  // к бургер меню присваивается класс ОПЕН
+  burgerMenu.classList.add('open');
+  // (this) кнопке бургера присвается тоже класс ОПЕН
+  // this.classList.toggle('open'); нужно было для преобразования гамбургера в крестик
 });
 
-// Называй кнопки чтобы было понятно за что они отвечают. Типа closeBtn
-// и добавь туда класс какой нб типа burger-button--close чтобы было понятно что есть что, а то сейчас пока разберешься заебешься))
-const burgerButton2 = document.querySelector('.burger-button');
-
-burgerButton2.addEventListener('click', function () {
-  // Если два раза используешь одну и ту же переменную, вынеси ее за скобки и используй переменную во всех нужных местах, не надо плодить повторы
-  const burgerMenu2 = document.querySelector('.burger-menu');
-
-  burgerMenu2.classList.remove('open');
-
-  // тоже не понятно что это за действие, что оно делает? для чего оно?
-  this.classList.remove('open');
+// тут создается переменная для закрывающей кнопки (крестик)
+const burgerBtnClose = document.querySelector('.menu-mobile-close');
+// Вешаем обработчик события клика на закрывающую кнопку (крестик)
+burgerBtnClose.addEventListener('click', function () {
+  // у бургер меню убирается  класс Open
+  burgerMenu.classList.remove('open');
 });

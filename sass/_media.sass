@@ -1,14 +1,18 @@
 // медиа запросы (адаптив)
-@media screen and ( max-width: 1968px )
+@media screen and ( min-width: 768px )
 
   .header
-    &-button
+    &-burger
       display: none
-  .burger
+  .menu-mobile
     display: none
+@media screen and ( max-width: 1447px )
+  .container
+    max-width: 1095px
+
 @media screen and ( max-width: 1100px )
   .container
-    max-width: 1000px
+    max-width: 840px
   .header
     &__logo
       max-width: 70px
@@ -26,7 +30,7 @@
           font-size: 16px
 @media screen and ( max-width: 845px )
   .container
-    max-width: 770px
+    max-width: 760px
   .header
     &__logo
       max-width: 60px
@@ -44,13 +48,35 @@
           font-size: 14px
 @media screen and ( max-width: 768px )
   .container
-    max-width: 728px
-  .burger
-    background-image: url('/assets/img/menu-mobile.png')
-    background-repeat: no-repeat
+    max-width: 520px
+  .menu-mobile
+    padding-left: 62px
+    padding-top: 92px
     background-size: cover
     display: block
-    &-button
+    position: fixed
+    top: -15px
+    right: 0
+    left: 100%
+    bottom: 0
+    transition: .3s
+    transition: .3s
+    background-image: url('/assets/img/menu-mobile.png')
+    background-repeat: no-repeat
+
+    &.open
+      left: 50%
+      & .menu-mobile-list
+        &__item
+          &:nth-child(3)
+            & .menu-mobile-list__link
+              color: $active
+            &:nth-child(2)
+              font-style: italic
+    &-wrapper
+      position: relative
+      width: 100%
+    &-close
       display: flex
       flex-direction: column
       justify-content: space-around
@@ -59,10 +85,10 @@
       background: transparent
       border: none
       cursor: pointer
-      position: relative
-      left: 90%
-      bottom: 23%
-      & .burger-button__line
+      position: absolute
+      right: 15px
+      top: -55px
+      & .menu-mobile-close__line
         &:nth-child(1)
           transform: rotate(45deg) translate(5px, 6px)
           &:nth-child(2)
@@ -75,46 +101,28 @@
         height: 2px
         background-color: #ffffff
         border-radius: 10px
-        transition: all .3s
-        &:last-child
-          width: 14px
-    &-menu
-      position: fixed
-      top: 0px
-      right: 0
-      left: 100%
-      bottom: 0
-      transition: .3s
-      transition: .3s
-      &.open
-        left: 50%
-        & .burger-mobile-list
-          &__item
-            &:nth-child(3)
-              & .burger-mobile-list__link
-                color: $active
-            &:nth-child(2)
-              font-style: italic
+        &:nth-child(1)
+          transform: rotate(45deg) translate(5px, 6px)
+        &:nth-child(2)
+          width: 20px
+          transform: rotate(135deg) translate(-4px, 5px)
 
     // &-img
     //   position: absolute  бред ебаной кобылы
     //   max-width: 100%
-    &-mobile
-      &-list
-        position: relative
-        display: flex
-        flex-direction: column
-        justify-content: space-evenly
-        height: 201px
-        padding-left: 62px
-        padding-top: 92px
-        &__item
-          padding-bottom: 15px
-        &__link
-          font-family: $manrope
-          font-size: 16px
-          font-weight: $medium
-          color: $white
+
+    &-list
+      position: relative
+      display: flex
+      flex-direction: column
+      justify-content: space-evenly
+      &__item
+        padding-bottom: 15px
+      &__link
+        font-family: $manrope
+        font-size: 16px
+        font-weight: $medium
+        color: $white
 
   .header
     &-menu
@@ -130,7 +138,7 @@
       &__img
         width: 30px
         height: 30px
-    &-button
+    &-burger
       display: flex
       flex-direction: column
       justify-content: space-around
@@ -148,19 +156,17 @@
         &:last-child
           width: 14px
 
-  .burger-button__line
-    &:nth-child(1)
-      transform: rotate(45deg) translate(5px, 6px)
-    &:nth-child(2)
-      display: none
-    &:nth-child(3)
-      width: 20px
-      transform: rotate(135deg) translate(-4px, 5px)
+@media screen and ( max-width: 525px )
+  .container
+    max-width: 92%
+  .menu
+    &-mobile
+      padding-left: 25px
+      &-close
+        right: 0px
 
 @media screen and ( max-width: 360px )
 
-  .container
-    max-width: 320px
   .header
     &__logo
       width: 70px
