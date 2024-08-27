@@ -219,6 +219,30 @@ p, span {
   background-color: #e79c2b;
 }
 
+.about {
+  padding-top: 180px;
+}
+.about-wrapper {
+  display: flex;
+}
+.about__image {
+  max-width: 710px;
+  max-height: 435px;
+  margin-right: 132px;
+}
+.about__title {
+  font-family: "Raleway-Bold", sans-serif;
+  font-weight: Bold;
+  font-size: 47px;
+  line-height: 125%;
+}
+.about__text {
+  font-family: "Manrope-Medium", sans-serif;
+  font-size: 18px;
+  line-height: 130%;
+  margin-top: 30px;
+}
+
 @media screen and (min-width: 768px) {
   .header-burger {
     display: none;
@@ -230,6 +254,14 @@ p, span {
 @media screen and (max-width: 1447px) {
   .container {
     max-width: 1095px;
+  }
+  .about__image {
+    max-width: 650px;
+    max-height: 500px;
+    margin-right: 40px;
+  }
+  .about__text {
+    margin-top: 20px;
   }
 }
 @media screen and (max-width: 1100px) {
@@ -264,7 +296,9 @@ p, span {
   }
   .hero-right-wrapper--mobile.hero-right-wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    position: absolute;
+    left: 35%;
   }
   .hero-right-wrapper--mobile.hero-right-wrapper .hero-advantages__text {
     color: #434242;
@@ -280,6 +314,13 @@ p, span {
   }
   .btn {
     font-size: 16px;
+  }
+  .about__image {
+    max-width: 355px;
+    max-height: 440px;
+  }
+  .about__text {
+    margin-top: 10px;
   }
 }
 @media screen and (max-width: 845px) {
@@ -305,6 +346,12 @@ p, span {
   }
   .hero-left__title {
     font-size: 38px;
+  }
+  .about__title {
+    font-size: 32px;
+  }
+  .about__text {
+    font-size: 16px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -429,6 +476,20 @@ p, span {
   .header-burger__line:last-child {
     width: 14px;
   }
+  .about-wrapper {
+    flex-direction: column;
+  }
+  .about__image {
+    min-width: 100%;
+  }
+  .about-description {
+    margin-top: 30px;
+    width: 92%;
+    margin-left: 15px;
+  }
+  .about__text {
+    margin-top: 15px;
+  }
 }
 @media screen and (max-width: 525px) {
   .container {
@@ -471,6 +532,9 @@ p, span {
   }
   .btn {
     margin-bottom: 70px;
+  }
+  .about__text {
+    font-size: 14px;
   }
 }
 @media screen and (max-width: 360px) {

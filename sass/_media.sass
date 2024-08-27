@@ -8,7 +8,13 @@
 @media screen and ( max-width: 1447px )
   .container
     max-width: 1095px
-
+  .about
+    &__image
+      max-width: 650px
+      max-height: 500px
+      margin-right: 40px
+    &__text
+      margin-top: 20px
 @media screen and ( max-width: 1100px )
   .container
     max-width: 840px
@@ -36,7 +42,9 @@
           display: block
           &.hero-right-wrapper
             display: flex
-            justify-content: space-between
+            justify-content: space-evenly
+            position: absolute
+            left: 35%
             & .hero-advantages
               &__text
                 color: #434242
@@ -51,6 +59,12 @@
         font-size: 16px
   .btn
     font-size: 16px
+  .about
+    &__image
+      max-width: 355px
+      max-height: 440px
+    &__text
+      margin-top: 10px
 @media screen and ( max-width: 845px )
   .container
     max-width: 760px
@@ -73,6 +87,11 @@
     &-left
       &__title
         font-size: 38px
+  .about
+    &__title
+      font-size: 32px
+    &__text
+      font-size: 16px
 
 @media screen and ( max-width: 768px )
   .container
@@ -184,7 +203,17 @@
         transition: all .3s
         &:last-child
           width: 14px
-
+  .about
+    &-wrapper
+      flex-direction: column
+    &__image
+      min-width: 100%
+    &-description
+      margin-top: 30px
+      width: 92%
+      margin-left: 15px
+    &__text
+      margin-top: 15px
 @media screen and ( max-width: 525px )
   .container
     max-width: 92%
@@ -220,6 +249,9 @@
           flex-direction: column
   .btn
     margin-bottom: 70px
+  .about
+    &__text
+      font-size: 14px
 @media screen and ( max-width: 360px )
 
   .header
