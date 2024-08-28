@@ -38,17 +38,6 @@
       width: 70%
       &-wrapper
         display: none
-        &--mobile
-          display: block
-          &.hero-right-wrapper
-            display: flex
-            justify-content: space-evenly
-            position: absolute
-            left: 35%
-            & .hero-advantages
-              &__text
-                color: #434242
-
     &-left
       &__title
         font-size: 50px
@@ -57,12 +46,24 @@
     &-advantages
       &__text
         font-size: 16px
+    &-mobile
+      display: block
+      padding-top: 100px
+      & .hero
+        &-advantages
+          &__text
+            color: $dark
+      &-container
+        display: flex
+        justify-content: space-between
   .btn
     font-size: 16px
   .about
+    padding-top: 60px
     &__image
       max-width: 355px
       max-height: 440px
+      object-fit: cover
     &__text
       margin-top: 10px
 @media screen and ( max-width: 845px )
@@ -217,6 +218,9 @@
 @media screen and ( max-width: 525px )
   .container
     max-width: 92%
+    height: 100%
+  .header
+    padding: 25px 0
   .menu
     &-mobile
       padding-left: 25px
@@ -229,7 +233,11 @@
         flex-wrap: wrap
         align-content: space-around
   .hero
+    height: calc( 100vh - 177px )
+    padding-top: 20px
     &-left
+      height: 95%
+      justify-content: space-evenly
       &__title
         font-size: 30px
     &-advantages
@@ -237,16 +245,23 @@
       &__text
         font-size: 14px
     &-right
+      top: unset
+      bottom: 0
       width: 100%
-      height: 50%
-      top: 70%
-      &-wrapper
-        &--mobile
-          position: relative
-          padding-top: 200px
-          bottom: 0
-          left: 0
-          flex-direction: column
+      max-width: 100%
+      height: 300px
+      &:before
+        transform: rotate(180deg)
+        bottom: unset
+        top: 0
+      &:after
+        transform: rotate(180deg)
+        bottom: unset
+        top: 0
+    &-mobile
+      padding: 60px 0
+      &-container
+        flex-direction: column
   .btn
     margin-bottom: 70px
   .about
@@ -278,5 +293,3 @@
     &-right
       width: 360px
       height: 300px
-      &-wrapper
-        &--mobile
