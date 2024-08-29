@@ -46,6 +46,10 @@ p, span {
   border-radius: 15px;
 }
 
+section {
+  padding: 180px 0px;
+}
+
 .header {
   background-color: #323030;
   padding: 54px 0;
@@ -234,9 +238,6 @@ p, span {
   background-color: #e79c2b;
 }
 
-.about {
-  padding-top: 180px;
-}
 .about-wrapper {
   display: flex;
 }
@@ -256,6 +257,89 @@ p, span {
   font-size: 18px;
   line-height: 130%;
   margin-top: 30px;
+}
+
+.cases {
+  background-color: #323030;
+}
+.cases-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.cases__title {
+  font-family: "Raleway-Bold", sans-serif;
+  font-size: 47px;
+  line-height: 1.25;
+  color: #f2f2f2;
+}
+.cases-categories__category {
+  font-family: "Manrope-Bold", sans-serif;
+  font-size: 20px;
+  color: #f2f2f2;
+  text-transform: uppercase;
+  margin-right: 15px;
+}
+.cases-categories__category:last-child {
+  margin-right: unset;
+}
+.cases-categories__category--active {
+  position: relative;
+  color: #e79c2b;
+}
+.cases-categories__category--active::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #e79c2b;
+  height: 1px;
+}
+.cases-card {
+  position: relative;
+}
+.cases-card-hover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.41) 34.9%, #000 100%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.cases-card-hover:hover {
+  opacity: 1;
+}
+.cases-card__title {
+  font-family: "Manrope-Bold", sans-serif;
+  font-size: 20px;
+  line-height: 1.4;
+  color: #f2f2f2;
+  margin-bottom: 11px;
+  text-transform: uppercase;
+}
+.cases-card-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.cases-card-info-wrapper {
+  display: flex;
+  align-items: center;
+}
+.cases-card-info__text {
+  font-family: "Manrope-Medium", sans-serif;
+  font-size: 18px;
+  color: #f2f2f2;
+  margin-left: 10px;
 }
 
 @media screen and (min-width: 768px) {
