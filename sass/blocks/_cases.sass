@@ -5,6 +5,13 @@
     justify-content: space-between
     align-items: center
     margin-bottom: 60px
+    &--full
+      min-width: 100vw
+      display: grid
+      grid-template-columns: repeat(5, 1fr)
+      grid-template-rows: repeat(2, 1fr)
+      justify-content: center
+      gap: 24px
   &__title
     font-family: $ralewayBold
     font-size: 47px
@@ -32,6 +39,21 @@
           height: 1px
   &-card
     position: relative
+    &__img
+      width: 100%
+      height: 100%
+    &--one
+      grid-column: 1/3
+      grid-row: 1/3
+    &--two
+      grid-column: 3/4
+      grid-row: 1/2
+    &--three
+      grid-column: 3/4
+      grid-row: 2/3
+    &--four
+      grid-column: 4/6
+      grid-row: 1/3
     &-hover
       position: absolute
       top: 0

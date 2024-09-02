@@ -66,6 +66,12 @@
       object-fit: cover
     &__text
       margin-top: 10px
+  .cases
+    &__title
+      font-size: 32px
+    &-categories
+      &__category
+        font-size: 18px
 @media screen and ( max-width: 845px )
   .container
     max-width: 760px
@@ -93,10 +99,16 @@
       font-size: 32px
     &__text
       font-size: 16px
-
+  .cases
+    &-container
+      &--full
+        grid-template-columns: repeat(3, 1fr)
+    &-card
+      &--four
+        display: none
 @media screen and ( max-width: 768px )
   .container
-    max-width: 520px
+    max-width: 92%
   .menu-mobile
     padding-left: 62px
     padding-top: 92px
@@ -215,7 +227,15 @@
       margin-left: 15px
     &__text
       margin-top: 15px
-@media screen and ( max-width: 525px )
+  .cases
+    padding: 90px 0
+    &__title
+      font-size: 22px
+    &-categories
+      &__category
+        font-size: 12px
+        margin-right: 10px
+@media screen and ( max-width: 675px )
   .container
     max-width: 92%
     height: 100%
@@ -267,6 +287,15 @@
   .about
     &__text
       font-size: 14px
+  .cases
+    &__title
+      font-size: 22px
+    &-categories
+      &__category
+        font-size: 12px
+    &-container
+      &--full
+        gap: 10px
 @media screen and ( max-width: 360px )
 
   .header
