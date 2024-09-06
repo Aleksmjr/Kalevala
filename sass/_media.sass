@@ -72,6 +72,26 @@
     &-categories
       &__category
         font-size: 18px
+    &-container
+      &--full
+        gap: 15px
+    &-card
+      &:nth-child(2), &:nth-child(3)
+        & .cases
+          &-card
+            &__title
+              font-size: 16px
+            &-hover
+              padding: 10px
+  .advantages
+    &__title
+      font-size: 42px
+    &-card
+      width: 354px
+      &__title
+        font-size: 20px
+      &__text
+        font-size: 16px
 @media screen and ( max-width: 845px )
   .container
     max-width: 760px
@@ -231,10 +251,17 @@
     padding: 90px 0
     &__title
       font-size: 22px
+      margin-bottom: 15px
     &-categories
       &__category
         font-size: 12px
         margin-right: 10px
+  .advantages
+    &__title
+      display: none
+    &-card
+      padding: 25px 50px 25px 25px
+      width: 48%
 @media screen and ( max-width: 675px )
   .container
     max-width: 92%
@@ -282,8 +309,6 @@
       padding: 60px 0
       &-container
         flex-direction: column
-  .btn
-    margin-bottom: 70px
   .about
     &__text
       font-size: 14px
@@ -296,6 +321,17 @@
     &-container
       &--full
         gap: 10px
+  .advantages
+    background-size: cover
+    &-card
+      max-width: unset
+      min-height: unset
+      width: 100%
+      &__title
+        margin-bottom: 10px
+    &-box
+      gap: unset
+
 @media screen and ( max-width: 360px )
 
   .header
