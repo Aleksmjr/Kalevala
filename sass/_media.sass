@@ -103,6 +103,19 @@
         font-size: 20px
       &__text
         font-size: 16px
+  .features
+    &-wrapper
+      &__img
+        width: 50%
+    &-box
+      margin-left: unset
+    &-item
+      &::after
+        font-size: 26px
+      &__text
+        font-size: 20px
+      &__link
+        font-size: 16px
 @media screen and ( max-width: 845px )
   .container
     max-width: 760px
@@ -273,6 +286,22 @@
     &-card
       padding: 25px 50px 25px 25px
       width: 48%
+  .features
+    &-wrapper
+      flex-direction: column-reverse
+      align-content: center
+    &__title
+      font-size: 24px
+    &__text
+      font-size: 14px
+    &-item
+      &::after
+        font-size: 20px
+        left: -30px
+      &__text
+        font-size: 16px
+      &__link
+        font-size: 14px
 @media screen and ( max-width: 675px )
   .container
     max-width: 92%
@@ -342,7 +371,6 @@
         margin-bottom: 10px
     &-box
       gap: unset
-
 @media screen and ( max-width: 360px )
 
   .header
