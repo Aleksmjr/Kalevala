@@ -1,0 +1,49 @@
+.technology
+  padding-top: unset
+  &__title
+    font-family: $ralewayBold
+    font-size: 28px
+    color: $dark
+    line-height: 1.25
+    margin-bottom: 30px
+  &__text
+    font-family: $manrope
+    font-size: 16px
+    color: $dark
+    line-height: 1.25
+  &-wrapper
+    margin-top: 30px
+    display: flex
+    justify-content: space-between
+    &--active
+      &.technology
+        &-wrapper
+          display: none
+    &-right
+      max-width: 606px
+    &-card
+      margin-top: 60px
+    &-box
+      display: flex
+      justify-content: space-between
+      position: relative
+      margin-top: 30px
+      cursor: pointer
+      &:after
+        content: ''
+        position: absolute
+        top: 0
+        right: 0
+        left: 0
+        bottom: -15px
+        border-bottom: 1px solid $grey
+      &__title
+        font-family: $manropeBold
+        font-size: 20px
+      &--active
+        & .technology
+          &-wrapper
+            &-box
+              &__title
+                color: $active
+              &__img

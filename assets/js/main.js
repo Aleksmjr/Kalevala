@@ -18,3 +18,9 @@ burgerBtnClose.addEventListener('click', function () {
   // у бургер меню убирается  класс Open
   burgerMenu.classList.remove('open');
 });
+
+// const technologyTab = document.querySelector('.technology-wrapper-box');
+
+// technologyTab.addEventListener('click', function () {
+//   technologyTab.classList.add('technology-wrapper-box--active');
+// });
