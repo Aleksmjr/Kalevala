@@ -552,6 +552,78 @@ section {
 .technology-wrapper-box--active .technology-wrapper-box__title {
   color: #e79c2b;
 }
+
+.discover {
+  background-image: url(/assets/img/contacts.jpg);
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.discover-container {
+  display: flex;
+  align-items: center;
+}
+.discover-left__title {
+  font-family: "Raleway-Bold", sans-serif;
+  font-size: 33px;
+  line-height: 1.2;
+  color: #f2f2f2;
+  margin-bottom: 30px;
+  width: 70%;
+}
+.discover-left__text {
+  font-family: "Manrope-Medium", sans-serif;
+  font-size: 18px;
+  color: #f2f2f2;
+  width: 80%;
+}
+.discover-left__text:last-child {
+  margin-top: 30px;
+}
+.discover-right {
+  background: #f2f2f2;
+  min-width: 604px;
+  height: 500px;
+}
+.discover-form {
+  display: flex;
+  flex-direction: column;
+  padding: 60px;
+}
+.discover-form__title {
+  font-family: "Raleway-Bold", sans-serif;
+  font-size: 33px;
+  line-height: 1.2;
+}
+.discover-form-input {
+  display: flex;
+  flex-direction: column;
+  margin: 40px 0;
+}
+.discover-form-input__text {
+  font-family: "Manrope-Medium", sans-serif;
+  font-size: 12px;
+  line-height: 1.2;
+  color: #9E9C9C;
+  width: 100%;
+  height: 50px;
+  border: none;
+}
+.discover-form-input__text:nth-child(2) {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.discover-form__btn {
+  margin-bottom: 22px;
+}
+.discover-form__config {
+  font-family: "Manrope-Medium", sans-serif;
+  font-size: 12px;
+  line-height: 1.2;
+  color: #aaaaaa;
+  text-align: center;
+}
+
 @media screen and (min-width: 768px) {
   .header-burger {
     display: none;
