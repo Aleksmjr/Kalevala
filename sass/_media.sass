@@ -18,10 +18,13 @@
   .features
     &-container
       max-width: unset
+    &-wrapper
+      &__img
+        margin-right: unset
     &-box
       margin-left: 10%
     &-item
-      width: 30vw
+      width: unset
       &__text
         font-size: 28px
       &__link
@@ -33,6 +36,10 @@
         object-fit: cover
       &-right
         width: 40%
+  .advantages
+    &-box
+      justify-content: space-between
+
 @media screen and ( max-width: 1100px )
   .container
     max-width: 840px
@@ -105,7 +112,7 @@
     &__title
       font-size: 42px
     &-card
-      width: 354px
+      flex-basis: 48%
       &__title
         font-size: 20px
       &__text
@@ -114,8 +121,6 @@
     &-wrapper
       &__img
         width: 50%
-    &-box
-      margin-left: unset
     &-item
       &::after
         font-size: 26px
@@ -157,6 +162,14 @@
     &-card
       &--four
         display: none
+  .features
+    &-container
+      &--full
+        border-radius: 0 0 400px 400px
+    &-wrapper
+      padding-top: 60px
+      flex-direction: column-reverse
+
 @media screen and ( max-width: 768px )
   .container
     max-width: 92%
@@ -288,11 +301,8 @@
         font-size: 12px
         margin-right: 10px
   .advantages
-    &__title
-      display: none
     &-card
       padding: 25px 50px 25px 25px
-      width: 48%
   .features
     &-wrapper
       flex-direction: column-reverse
@@ -304,11 +314,13 @@
     &-item
       &::after
         font-size: 20px
-        left: -30px
+        left: 0
       &__text
         font-size: 16px
       &__link
         font-size: 14px
+  .title
+    font-size: 28px
 @media screen and ( max-width: 675px )
   .container
     max-width: 92%
@@ -371,15 +383,14 @@
   .advantages
     background-size: cover
     &-card
-      max-width: unset
-      min-height: unset
-      width: 100%
+      flex-basis: 100%
       &__title
         margin-bottom: 10px
     &-box
       gap: unset
+  .title
+    font-size: 22px
 @media screen and ( max-width: 360px )
-
   .header
     &__logo
       width: 70px
@@ -404,3 +415,9 @@
     &-right
       width: 360px
       height: 300px
+  .title
+    font-size: 18px
+  .features
+    &-box
+      width: 90%
+      margin: auto

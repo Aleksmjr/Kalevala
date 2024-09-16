@@ -20,7 +20,9 @@ burgerBtnClose.addEventListener('click', function () {
 });
 
 // const technologyTab = document.querySelector('.technology-wrapper-box');
-
+// console.log(technologyTab);
+// const technologyTabs = document.querySelectorAll('.technology-wrapper-box');
+// console.log(technologyTabs);
 // technologyTab.addEventListener('click', function () {
-//   technologyTab.classList.add('technology-wrapper-box--active');
+//   technologyTab.classList.add('active');
 // });
