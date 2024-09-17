@@ -53,6 +53,10 @@ section {
   padding: 180px 0px;
 }
 
+.title {
+  font-size: 47px;
+}
+
 .header {
   background-color: #323030;
   padding: 54px 0;
@@ -157,6 +161,7 @@ section {
   z-index: 2;
 }
 .hero-advantages {
+  margin-top: 90px;
   z-index: 2;
 }
 .hero-advantages__text {
@@ -416,8 +421,7 @@ section {
 }
 .advantages-card {
   background: rgba(0, 0, 0, 0.5);
-  max-width: 467px;
-  min-height: 192px;
+  flex-basis: 48%;
   padding: 30px 91px 30px 30px;
   display: flex;
   flex-wrap: wrap;
@@ -441,6 +445,9 @@ section {
   gap: 23px;
 }
 
+.features {
+  max-width: 100%;
+}
 .features__title {
   font-family: "Raleway-Bold", sans-serif;
   font-size: 47px;
@@ -453,33 +460,37 @@ section {
   font-size: 18px;
   color: #323030;
 }
-.features-container .features-container--full {
-  background-image: url(../img/features-bgc.png);
+.features-container--full {
+  background: url(../img/features-bgc.png) lightgray 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  object-fit: scale-down;
+  object-fit: cover;
   margin-top: 60px;
+  border-radius: 400px 0 0 400px;
 }
 .features-wrapper {
   display: flex;
   align-items: center;
 }
+.features-wrapper__img {
+  margin-right: 10%;
+}
 .features-box {
-  margin-left: 158px;
   counter-reset: numbers;
 }
 .features-item {
   margin-bottom: 30px;
   max-width: 605px;
   position: relative;
+  padding-left: 36px;
 }
 .features-item::after {
   color: #e79c2b;
   counter-increment: numbers;
-  content: counter(numbers);
+  content: counter(numbers) ".";
   position: absolute;
   right: 0px;
-  left: -40px;
+  left: 0px;
   bottom: 0px;
   top: 0px;
   font-size: 33px;
@@ -502,41 +513,33 @@ section {
 .technology {
   padding-top: unset;
 }
-.technology__title {
+.technology-description__title {
   font-family: "Raleway-Bold", sans-serif;
   font-size: 28px;
   color: #323030;
   line-height: 1.25;
   margin-bottom: 30px;
 }
-.technology__text {
+.technology-description__text {
   font-family: "Manrope-Medium", sans-serif;
   font-size: 16px;
   color: #323030;
   line-height: 1.25;
 }
-.technology-wrapper {
-  margin-top: 30px;
-  display: flex;
-  justify-content: space-between;
-}
-.technology-wrapper--active.technology-wrapper {
-  display: none;
-}
-.technology-wrapper-right {
+.technology-description__text-right {
   max-width: 606px;
 }
-.technology-wrapper-card {
+.technology-description__text-card {
   margin-top: 60px;
 }
-.technology-wrapper-box {
+.technology-description__text-box {
   display: flex;
   justify-content: space-between;
   position: relative;
   margin-top: 30px;
   cursor: pointer;
 }
-.technology-wrapper-box:after {
+.technology-description__text-box:after {
   content: "";
   position: absolute;
   top: 0;
@@ -545,12 +548,10 @@ section {
   bottom: -15px;
   border-bottom: 1px solid #434242;
 }
-.technology-wrapper-box__title {
+.technology-description__text-box__title {
   font-family: "Manrope-Bold", sans-serif;
   font-size: 20px;
-}
-.technology-wrapper-box--active .technology-wrapper-box__title {
-  color: #e79c2b;
+  text-transform: uppercase;
 }
 
 .discover {
@@ -647,11 +648,14 @@ section {
   .features-container {
     max-width: unset;
   }
+  .features-wrapper__img {
+    margin-right: unset;
+  }
   .features-box {
     margin-left: 10%;
   }
   .features-item {
-    width: 30vw;
+    width: unset;
   }
   .features-item__text {
     font-size: 28px;
@@ -665,6 +669,9 @@ section {
   }
   .technology-wrapper-right {
     width: 40%;
+  }
+  .advantages-box {
+    justify-content: space-between;
   }
 }
 @media screen and (max-width: 1100px) {
@@ -747,7 +754,7 @@ section {
     font-size: 42px;
   }
   .advantages-card {
-    width: 354px;
+    flex-basis: 48%;
   }
   .advantages-card__title {
     font-size: 20px;
@@ -757,9 +764,6 @@ section {
   }
   .features-wrapper__img {
     width: 50%;
-  }
-  .features-box {
-    margin-left: unset;
   }
   .features-item::after {
     font-size: 26px;
@@ -806,6 +810,13 @@ section {
   }
   .cases-card--four {
     display: none;
+  }
+  .features-container--full {
+    border-radius: 0 0 400px 400px;
+  }
+  .features-wrapper {
+    padding-top: 60px;
+    flex-direction: column-reverse;
   }
 }
 @media screen and (max-width: 768px) {
@@ -955,12 +966,8 @@ section {
     font-size: 12px;
     margin-right: 10px;
   }
-  .advantages__title {
-    display: none;
-  }
   .advantages-card {
     padding: 25px 50px 25px 25px;
-    width: 48%;
   }
   .features-wrapper {
     flex-direction: column-reverse;
@@ -974,13 +981,16 @@ section {
   }
   .features-item::after {
     font-size: 20px;
-    left: -30px;
+    left: 0;
   }
   .features-item__text {
     font-size: 16px;
   }
   .features-item__link {
     font-size: 14px;
+  }
+  .title {
+    font-size: 28px;
   }
 }
 @media screen and (max-width: 675px) {
@@ -1061,15 +1071,16 @@ section {
     background-size: cover;
   }
   .advantages-card {
-    max-width: unset;
-    min-height: unset;
-    width: 100%;
+    flex-basis: 100%;
   }
   .advantages-card__title {
     margin-bottom: 10px;
   }
   .advantages-box {
     gap: unset;
+  }
+  .title {
+    font-size: 22px;
   }
 }
 @media screen and (max-width: 360px) {
@@ -1102,5 +1113,12 @@ section {
   .hero-right {
     width: 360px;
     height: 300px;
+  }
+  .title {
+    font-size: 18px;
+  }
+  .features-box {
+    width: 90%;
+    margin: auto;
   }
 }
