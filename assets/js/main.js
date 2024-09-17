@@ -19,7 +19,16 @@ burgerBtnClose.addEventListener('click', function () {
   burgerMenu.classList.remove('open');
 });
 
-// const technologyTab = document.querySelector('.technology-wrapper-box');
+const technologyTabs = document.querySelectorAll('.technology-wrapper-box');
+const techImgs = document.querySelectorAll('.technology-wrapper__img');
+technologyTabs.forEach((el, index) => {
+  el.addEventListener('click', function () {
+    techImgs.forEach((el) => {
+      el.classList.remove('asd');
+    });
+    techImgs[index].classList.add(`asd`);
+  });
+});
 
 // technologyTab.addEventListener('click', function () {
 //   technologyTab.classList.add('technology-wrapper-box--active');
