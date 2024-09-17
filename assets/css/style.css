@@ -513,41 +513,59 @@ section {
 .technology {
   padding-top: unset;
 }
-.technology__title {
+.technology-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(auto, 50%));
+  grid-template-rows: repeat(3, minmax(min-content, auto));
+  grid-column-gap: 130px;
+}
+.technology__img {
+  display: none;
+  grid-column: 1/2;
+  grid-row: 1/3;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.technology__img.active {
+  display: block;
+}
+.technology-description {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.technology-description__title {
   font-family: "Raleway-Bold", sans-serif;
   font-size: 28px;
   color: #323030;
   line-height: 1.25;
   margin-bottom: 30px;
 }
-.technology__text {
+.technology-description__text {
   font-family: "Manrope-Medium", sans-serif;
   font-size: 16px;
   color: #323030;
   line-height: 1.25;
 }
-.technology-wrapper {
-  margin-top: 30px;
-  display: flex;
-  justify-content: space-between;
-}
-.technology-wrapper--active.technology-wrapper {
-  display: none;
-}
-.technology-wrapper-right {
+.technology-right {
   max-width: 606px;
+  grid-column: 2/3;
+  grid-row: 2/3;
 }
-.technology-wrapper-card {
+.technology-card {
   margin-top: 60px;
 }
-.technology-wrapper-box {
+.technology-box {
   display: flex;
   justify-content: space-between;
   position: relative;
   margin-top: 30px;
   cursor: pointer;
 }
-.technology-wrapper-box:after {
+.technology-box svg path {
+  transition: fill 0.3s;
+}
+.technology-box:after {
   content: "";
   position: absolute;
   top: 0;
@@ -556,13 +574,17 @@ section {
   bottom: -15px;
   border-bottom: 1px solid #434242;
 }
-.technology-wrapper-box__title {
+.technology-box__title {
   font-family: "Manrope-Bold", sans-serif;
   font-size: 20px;
   text-transform: uppercase;
+  transition: color 0.3s;
 }
-.technology-wrapper-box--active .technology-wrapper-box__title {
+.technology-box.active .technology-box__title {
   color: #e79c2b;
+}
+.technology-box.active svg path {
+  fill: #e79c2b;
 }
 
 .discover {
