@@ -534,14 +534,14 @@ section {
   grid-column: 2/3;
   grid-row: 1/2;
 }
-.technology-description__title {
+.technology__title {
   font-family: "Raleway-Bold", sans-serif;
   font-size: 28px;
   color: #323030;
   line-height: 1.25;
   margin-bottom: 30px;
 }
-.technology-description__text {
+.technology__title__text {
   font-family: "Manrope-Medium", sans-serif;
   font-size: 16px;
   color: #323030;
