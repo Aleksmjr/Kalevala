@@ -1,4 +1,5 @@
 .features
+  max-width: 100%
   &__title
     font-family: $ralewayBold
     font-size: 47px
@@ -10,31 +11,33 @@
     font-size: 18px
     color: $dark
   &-container
-    & .features
-      &-container
-        &--full
-          background-image: url(../img/features-bgc.png)
-          background-repeat: no-repeat
-          background-size: cover
-          object-fit: scale-down
-          margin-top: 60px
+    &--full
+      background: url(../img/features-bgc.png) lightgray 50%
+      background-repeat: no-repeat
+      background-size: cover
+      object-fit: cover
+      margin-top: 60px
+      border-radius: 400px 0 0 400px
+
   &-wrapper
     display: flex
     align-items: center
+    &__img
+      margin-right: 10%
   &-box
-    margin-left: 158px
     counter-reset: numbers
   &-item
     margin-bottom: 30px
     max-width: 605px
     position: relative
+    padding-left: 36px
     &::after
       color: $active
       counter-increment: numbers
-      content: counter(numbers)
+      content: counter(numbers) '.'
       position: absolute
       right: 0px
-      left: -40px
+      left: 0px
       bottom: 0px
       top: 0px
       font-size: 33px
