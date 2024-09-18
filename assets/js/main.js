@@ -26,34 +26,46 @@ burgerBtnClose.addEventListener('click', function () {
 // technologyTab.addEventListener('click', function () {
 //   technologyTab.classList.add('active');
 // });
-let arr = ['a', 'b', 'c'];
 
-let arr2 = ['first', 'letter', 'third'];
+// let buttons = document.querySelectorAll('.rgb');
+// let colors = document.querySelectorAll('.color');
 
-let buttons = document.querySelectorAll('.rgb');
-let colors = document.querySelectorAll('.color');
+// // console.log(buttons);
+// // console.log(colors);
 
-// console.log(buttons);
-// console.log(colors);
+// buttons.forEach(function (el, index) {
+//   console.log(el, colors[index]);
 
-buttons.forEach(function (el, index) {
-  console.log(el, colors[index]);
+//   el.addEventListener('click', function () {
+//     colors.forEach(function (elem) {
+//       elem.classList.remove('active');
+//     });
 
+//     buttons.forEach(function (elem) {
+//       elem.classList.remove('active');
+//     });
+
+//     el.classList.add('active');
+
+//     colors[index].classList.add('active');
+//   });
+// });
+
+let tabs = document.querySelectorAll('.technology-box');
+let tabsImgs = document.querySelectorAll('.technology__img');
+
+tabs.forEach(function (el, index) {
   el.addEventListener('click', function () {
-    colors.forEach(function (elem) {
+    tabs.forEach(function (elem) {
       elem.classList.remove('active');
     });
-
-    buttons.forEach(function (elem) {
-      elem.classList.remove('active');
-    });
-
     el.classList.add('active');
-
-    colors[index].classList.add('active');
+    tabsImgs.forEach(function (el, index) {
+      el.classList.remove('active');
+    });
+    tabsImgs[index].classList.add('active');
   });
 });
-
 // function sum(a, b) {
 //   console.log(a + b);
 // }
