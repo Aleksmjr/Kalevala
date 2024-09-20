@@ -1,0 +1,83 @@
+.projects
+  background-color: $dark
+  &-container
+    margin-bottom: 60px
+  &-top
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 15px
+    &__title
+      font-family: $ralewayBold
+      font-size: 47px
+      line-height: 1.25
+      color: $white
+  &__text
+    font-family: $manrope
+    font-size: 18px
+    line-height: 1.25
+    color: $white
+  &-categories
+    &__category
+      font-family: $manropeBold
+      font-size: 20px
+      color: $white
+      text-transform: uppercase
+      margin-right: 15px
+      &:last-child
+        margin-right: unset
+      &--active
+        position: relative
+        color: $active
+        &::before
+          content: ''
+          position: absolute
+          right: 0
+          bottom: 0
+          left: 0
+          background-color: $active
+          height: 1px
+  &-cards
+    margin-top: 60px
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    gap: 25px
+  &-card
+    background-color: #fff
+    padding: 40px
+  &-wrapper
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    margin-top: 68px
+    &__title
+      font-family: $manropeBold
+      font-size: 20px
+      line-height: 1.40
+      color: $grey
+      margin-bottom: 11px
+      text-transform: uppercase
+    &-info
+      display: flex
+      justify-content: space-between
+      margin-top: 10px
+      margin-bottom: 20px
+      &__price
+        display: flex
+        justify-content: space-between
+      &__text
+        font-family: $manrope
+        font-size: 18px
+        margin-left: 10px
+        color: $grey
+  &-btn
+    background-color: transparent
+    display: flex
+    align-items: center
+    justify-content: space-between
+    color: $active
+    border: 1px solid $active
+    margin: 30px auto 0
+    & img
+      margin-left: 12px

@@ -131,6 +131,11 @@
   .technology
     &-container
       grid-column-gap: 5%
+  .discover
+    &-left
+      flex-basis: 45%
+    &-form
+      flex-basis: 45%
 @media screen and ( max-width: 845px )
   .container
     max-width: 760px
@@ -183,7 +188,16 @@
       grid-column: 1/3
     &-card
       margin-top: unset
-    &-
+  .discover
+    &-left
+      &__title
+        font-size: 32px
+      &__text
+        font-size: 16px
+    &-form
+      padding: 30px
+      &__title
+        font-size: 26px
 @media screen and ( max-width: 768px )
   .container
     max-width: 92%
@@ -344,6 +358,22 @@
       max-width: unset
     &-card
       margin-bottom: 10%
+  .discover
+    background-position: center
+    &-container
+      flex-direction: column
+    &-left
+      margin-bottom: 60px
+      &__title
+        font-size: 18px
+      &__text
+        font-size: 14px
+    &-form
+      &__title
+        font-size: 18px
+      &__text
+        font-size: 12px
+
 @media screen and ( max-width: 675px )
   .container
     max-width: 92%

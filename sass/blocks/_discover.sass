@@ -6,33 +6,31 @@
   &-container
     display: flex
     align-items: center
+    justify-content: space-between
   &-left
+    flex-basis: 50%
     &__title
       font-family: $ralewayBold
       font-size: 33px
       line-height: 1.2
       color: $white
       margin-bottom: 30px
-      width: 70%
     &__text
       font-family: $manrope
       font-size: 18px
       color: $white
-      width: 80%
       &:last-child
         margin-top: 30px
-  &-right
-    background: $white
-    min-width: 604px
-    height: 500px
   &-form
     display: flex
     flex-direction: column
     padding: 60px
+    background-color: #fff
     &__title
       font-family: $ralewayBold
       font-size: 33px
       line-height: 1.2
+      color: $grey
     &-input
       display: flex
       flex-direction: column
@@ -41,13 +39,17 @@
         font-family: $manrope
         font-size: 12px
         line-height: 1.2
-        color: #9E9C9C
-        width: 100%
         height: 50px
         border: none
+        outline: none
+        border-bottom: 1px solid rgb(158 156 156 / 50%)
+        color: #grey
         &:nth-child(2)
           margin-top: 5px
           margin-bottom: 5px
+        &::placeholder
+          color: #9E9C9C
+          font-family: $manrope
     &__btn
       margin-bottom: 22px
     &__config
