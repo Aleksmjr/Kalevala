@@ -1,0 +1,61 @@
+.modal
+  display: none
+  position: fixed
+  top: 50%
+  left: 50%
+  width: 92vw
+  background-color: #ffffff
+  z-index: 2
+  padding: 80px 50px
+  transform: translate(-50%, -50%)
+  &-wrapper
+    display: flex
+    justify-content: space-between
+  &-right
+    flex-basis: 30%
+    &__title
+      font-family: $ralewayBold
+      font-size: 34px
+      line-height: 1.2
+      margin-bottom: 26px
+  &-list
+    display: flex
+    align-items: center
+    &:nth-child(3)
+      margin-left: 28px
+    &__svg
+      width: 30px
+      height: 30px
+  &-item
+    display: flex
+    justify-content: space-between
+    width: 100%
+    margin-left: 20px
+    &__count
+      font-family: $manropeBold
+      font-size: 20px
+      line-height: 1.5
+    &__text
+      font-family: $manrope
+      font-size: 18px
+      color: $lightGrey
+  &-btn
+    background-color: #fff
+    color: $active
+    border: 1px solid $active
+    width: 100%
+    margin-top: 26px
+  &-info
+    flex-basis: 30%
+    &__text
+      font-family: $manrope
+      font-size: 18px
+      color: $lightGrey
+      margin-bottom: 30px
+  &-closeBtn
+    position: absolute
+    top: 20px
+    right: 20px
+    bottom: 0
+    cursor: pointer
+    transition: 0.3s
