@@ -450,6 +450,38 @@
         font-size: 16px
   .title
     font-size: 22px
+  .projects
+    &__text
+      font-size: 14px
+    &-top
+      flex-direction: column
+      align-items: flex-start
+      &__title
+        font-size: 24px
+        margin-bottom: 10px
+    &-categories
+      &__category
+        font-size: 14px
+    &-cards
+      justify-content: unset
+      gap: 20px
+    &-card
+      padding: 10px
+      flex-basis: 47%
+      &__img
+        width: 90%
+        height: 76px
+    &-wrapper
+      margin-top: unset
+      &-info
+        display: none
+      &__title
+        font-size: 14px
+        margin-top: 15px
+  .btn
+    &.modalOpen
+      padding: 9px 30px
+      margin-top: 10px
 @media screen and ( max-width: 360px )
   .header
     &__logo
@@ -494,3 +526,14 @@
     &-box
       &__title
         font-size: 12px
+  .projects
+    &-cards
+      gap: 10px
+    &-card
+      padding: 5px
+  .btn
+    font-size: 14px
+    &.modalOpen
+      padding: 5px 10px
+      border-radius: 5px
+      margin-bottom: 10px

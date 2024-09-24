@@ -78,3 +78,28 @@ tabs.forEach(function (el, index) {
 // объект.метод
 // массив.метод
 // массив.forEach
+const modalBtnOpen = document.querySelector('.modalOpen');
+
+const modalMenu = document.querySelector('.modal');
+
+modalBtnOpen.addEventListener('click', function () {
+  modalMenu.classList.add('open');
+});
+
+const modalBtnClose = document.querySelector('.modal-closeBtn');
+
+modalBtnClose.addEventListener('click', function () {
+  modalMenu.classList.remove('open');
+});
+
+// НИЖЕ СКРОЛЛ КО ВСЕМУ САЙТУ
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth',
+    });
+  });
+});
+// СКРОЛЛ КО ВСЕМУ САЙТУ OFF

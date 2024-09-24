@@ -120,6 +120,7 @@ section {
 }
 .hero-left__btn {
   z-index: 2;
+  scroll-behavior: smooth;
 }
 .hero-left__title {
   position: relative;
@@ -769,11 +770,14 @@ section {
   position: fixed;
   top: 50%;
   left: 50%;
-  width: 92vw;
+  width: 95vw;
   background-color: #ffffff;
   z-index: 2;
   padding: 80px 50px;
   transform: translate(-50%, -50%);
+}
+.modal.open {
+  display: block;
 }
 .modal-wrapper {
   display: flex;
@@ -833,11 +837,10 @@ section {
 }
 .modal-closeBtn {
   position: absolute;
-  top: 20px;
+  top: 50px;
   right: 20px;
   bottom: 0;
   cursor: pointer;
-  transition: 0.3s;
 }
 
 @media screen and (min-width: 768px) {
@@ -1370,6 +1373,46 @@ section {
   .title {
     font-size: 22px;
   }
+  .projects__text {
+    font-size: 14px;
+  }
+  .projects-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .projects-top__title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .projects-categories__category {
+    font-size: 14px;
+  }
+  .projects-cards {
+    justify-content: unset;
+    gap: 20px;
+  }
+  .projects-card {
+    padding: 10px;
+    flex-basis: 47%;
+  }
+  .projects-card__img {
+    width: 90%;
+    height: 76px;
+  }
+  .projects-wrapper {
+    margin-top: unset;
+  }
+  .projects-wrapper-info {
+    display: none;
+  }
+  .projects-wrapper__title {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+  .btn.modalOpen {
+    padding: 9px 30px;
+    margin-top: 10px;
+  }
 }
 @media screen and (max-width: 360px) {
   .header__logo {
@@ -1420,5 +1463,19 @@ section {
   }
   .technology-box__title {
     font-size: 12px;
+  }
+  .projects-cards {
+    gap: 10px;
+  }
+  .projects-card {
+    padding: 5px;
+  }
+  .btn {
+    font-size: 14px;
+  }
+  .btn.modalOpen {
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
   }
 }
