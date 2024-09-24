@@ -78,15 +78,17 @@ tabs.forEach(function (el, index) {
 // объект.метод
 // массив.метод
 // массив.forEach
-const modalBtnOpen = document.querySelector('.modalOpen');
-
+const modalBtnOpen = document.querySelectorAll('.modalOpen');
+console.log(modalBtnOpen);
 const modalMenu = document.querySelector('.modal');
 
-modalBtnOpen.addEventListener('click', function () {
-  modalMenu.classList.add('open');
+modalBtnOpen.forEach((elem) => {
+  elem.addEventListener('click', () => {
+    modalMenu.classList.add('open');
+  });
 });
 
-const modalBtnClose = document.querySelector('.modal-closeBtn');
+const modalBtnClose = modalMenu.querySelector('.modal-closeBtn');
 
 modalBtnClose.addEventListener('click', function () {
   modalMenu.classList.remove('open');

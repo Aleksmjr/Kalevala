@@ -50,7 +50,7 @@ p, span {
 }
 
 section {
-  padding: 180px 0px;
+  padding: 10% 0;
 }
 
 .title {
@@ -771,6 +771,7 @@ section {
   top: 50%;
   left: 50%;
   width: 95vw;
+  height: 95vh;
   background-color: #ffffff;
   z-index: 2;
   padding: 80px 50px;
@@ -828,6 +829,11 @@ section {
 }
 .modal-info {
   flex-basis: 30%;
+  overflow: auto;
+  max-height: 323px;
+  scrollbar-color: #D9D9D9 #ffffff;
+  scrollbar-width: thin;
+  scrollbar-gutter: stable;
 }
 .modal-info__text {
   font-family: "Manrope-Medium", sans-serif;
