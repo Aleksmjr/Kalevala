@@ -1,0 +1,42 @@
+.work
+  background-color: $dark
+  counter-reset: my-counter
+  &__title
+    font-family: $ralewayBold
+    font-size: 47px
+    color: $white
+    margin-bottom: 60px
+  &-info
+    display: flex
+    justify-content: space-between
+    background-color: #070707
+    align-items: center
+    border-top-right-radius: 200px
+    border-bottom-right-radius: 200px
+    padding: 85px 85px 85px 0
+    width: 98%
+    height: 400px
+    &__img
+      height: 400px
+      width: 60%
+      object-fit: cover
+      border-top-right-radius: 200px
+      border-bottom-right-radius: 200px
+    &-group
+      flex-basis: 35%
+      list-style-type: none
+
+      &__text
+        margin-bottom: 2em
+        &::before
+          content: counter(my-counter) "."
+          counter-increment: my-counter
+          margin-right: 1em
+          color: $active
+          font-family: $ralewayBold
+          font-size: 33px
+          line-height: 1.2
+      &__text
+        font-family: $manrope
+        font-size: 18px
+        color: $white

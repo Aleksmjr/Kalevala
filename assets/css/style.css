@@ -849,6 +849,56 @@ section {
   cursor: pointer;
 }
 
+.work {
+  background-color: #323030;
+  counter-reset: my-counter;
+}
+.work__title {
+  font-family: "Raleway-Bold", sans-serif;
+  font-size: 47px;
+  color: #f2f2f2;
+  margin-bottom: 60px;
+}
+.work-info {
+  display: flex;
+  justify-content: space-between;
+  background-color: #070707;
+  align-items: center;
+  border-top-right-radius: 200px;
+  border-bottom-right-radius: 200px;
+  padding: 85px 85px 85px 0;
+  width: 98%;
+  height: 400px;
+}
+.work-info__img {
+  height: 400px;
+  width: 60%;
+  object-fit: cover;
+  border-top-right-radius: 200px;
+  border-bottom-right-radius: 200px;
+}
+.work-info-group {
+  flex-basis: 35%;
+  list-style-type: none;
+}
+.work-info-group__text {
+  margin-bottom: 2em;
+}
+.work-info-group__text::before {
+  content: counter(my-counter) ".";
+  counter-increment: my-counter;
+  margin-right: 1em;
+  color: #e79c2b;
+  font-family: "Raleway-Bold", sans-serif;
+  font-size: 33px;
+  line-height: 1.2;
+}
+.work-info-group__text {
+  font-family: "Manrope-Medium", sans-serif;
+  font-size: 18px;
+  color: #f2f2f2;
+}
+
 @media screen and (min-width: 768px) {
   .header-burger {
     display: none;
