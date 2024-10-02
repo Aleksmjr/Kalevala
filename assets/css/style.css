@@ -869,6 +869,13 @@ section {
   padding: 85px 85px 85px 0;
   width: 98%;
   height: 400px;
+  margin-bottom: 60px;
+}
+.work-info--ml {
+  padding: 85px 0px 85px 85px;
+  border-top-left-radius: 200px;
+  border-bottom-left-radius: 200px;
+  margin-left: 2%;
 }
 .work-info__img {
   height: 400px;
@@ -876,6 +883,12 @@ section {
   object-fit: cover;
   border-top-right-radius: 200px;
   border-bottom-right-radius: 200px;
+}
+.work-info__img--midle {
+  border-top-left-radius: 200px;
+  border-bottom-left-radius: 200px;
+  border-top-right-radius: unset;
+  border-bottom-right-radius: unset;
 }
 .work-info-group {
   flex-basis: 35%;
@@ -892,6 +905,7 @@ section {
   font-family: "Raleway-Bold", sans-serif;
   font-size: 33px;
   line-height: 1.2;
+  font-weight: 600;
 }
 .work-info-group__text {
   font-family: "Manrope-Medium", sans-serif;
@@ -1056,6 +1070,12 @@ section {
   }
   .discover-form {
     flex-basis: 45%;
+  }
+  .work-info-group__text {
+    font-size: 14px;
+  }
+  .work-info-group ::before {
+    margin-right: 5px;
   }
 }
 @media screen and (max-width: 845px) {
@@ -1332,6 +1352,12 @@ section {
   }
   .discover-form__text {
     font-size: 12px;
+  }
+  .work__title {
+    font-size: 24px;
+  }
+  .work-info {
+    background-color: unset;
   }
 }
 @media screen and (max-width: 675px) {

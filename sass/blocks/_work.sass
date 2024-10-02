@@ -1,6 +1,7 @@
 .work
   background-color: $dark
   counter-reset: my-counter
+
   &__title
     font-family: $ralewayBold
     font-size: 47px
@@ -16,12 +17,23 @@
     padding: 85px 85px 85px 0
     width: 98%
     height: 400px
+    margin-bottom: 60px
+    &--ml
+      padding: 85px 0px 85px 85px
+      border-top-left-radius: 200px
+      border-bottom-left-radius: 200px
+      margin-left: 2%
     &__img
       height: 400px
       width: 60%
       object-fit: cover
       border-top-right-radius: 200px
       border-bottom-right-radius: 200px
+      &--midle
+        border-top-left-radius: 200px
+        border-bottom-left-radius: 200px
+        border-top-right-radius: unset
+        border-bottom-right-radius: unset
     &-group
       flex-basis: 35%
       list-style-type: none
@@ -36,6 +48,7 @@
           font-family: $ralewayBold
           font-size: 33px
           line-height: 1.2
+          font-weight: 600
       &__text
         font-family: $manrope
         font-size: 18px
