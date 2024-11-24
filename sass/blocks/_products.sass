@@ -1,0 +1,31 @@
+.products
+  background-color: $dark
+  padding: unset
+  &-title
+    font-family: $ralewayBold
+    font-size: 47px
+    color: $white
+  &-text
+    font-family: $manrope
+    font-size: 18px
+    color: $white
+    margin-top: 30px
+    max-width: 800px
+  &-wrapper
+    display: flex
+    margin-top: 60px
+    gap: 25px
+    &-right
+      position: relative
+      &__image
+        filter: brightness(30%)
+        cursor: pointer
+        width: 100%
+        height: 100%
+      &__svg
+        cursor: pointer
+        position: absolute
+        top: 50%
+        left: 50%
+  &__image
+    max-width: 75%

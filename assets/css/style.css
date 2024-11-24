@@ -411,7 +411,8 @@ section {
   background-image: url(/assets/img/advantages.png);
   background-repeat: no-repeat;
   background-size: cover;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .advantages__title {
   font-family: "Raleway-Bold", sans-serif;
@@ -465,7 +466,8 @@ section {
   background: url(../img/features-bgc.png) lightgray 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin-top: 60px;
   border-radius: 400px 0 0 400px;
 }
@@ -526,7 +528,8 @@ section {
   grid-row: 1/3;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .technology__img.active {
   display: block;
@@ -590,7 +593,8 @@ section {
 
 .discover {
   background-image: url(/assets/img/contacts.jpg);
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -647,6 +651,10 @@ section {
 .discover-form-input__text:nth-child(2) {
   margin-top: 5px;
   margin-bottom: 5px;
+}
+.discover-form-input__text::-moz-placeholder {
+  color: #9E9C9C;
+  font-family: "Manrope-Medium", sans-serif;
 }
 .discover-form-input__text::placeholder {
   color: #9E9C9C;
@@ -880,7 +888,8 @@ section {
 .work-info__img {
   height: 400px;
   width: 60%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-top-right-radius: 200px;
   border-bottom-right-radius: 200px;
 }
@@ -911,6 +920,104 @@ section {
   font-family: "Manrope-Medium", sans-serif;
   font-size: 18px;
   color: #f2f2f2;
+}
+
+.products {
+  background-color: #323030;
+  padding: unset;
+}
+.products-title {
+  font-family: "Raleway-Bold", sans-serif;
+  font-size: 47px;
+  color: #f2f2f2;
+}
+.products-text {
+  font-family: "Manrope-Medium", sans-serif;
+  font-size: 18px;
+  color: #f2f2f2;
+  margin-top: 30px;
+  max-width: 800px;
+}
+.products-wrapper {
+  display: flex;
+  margin-top: 60px;
+  gap: 25px;
+}
+.products-wrapper-right {
+  position: relative;
+}
+.products-wrapper-right__image {
+  filter: brightness(30%);
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+.products-wrapper-right__svg {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.products__image {
+  max-width: 75%;
+}
+
+.location {
+  background-color: #323030;
+}
+.location-title {
+  font-family: "Raleway-Bold", sans-serif;
+  font-size: 47px;
+  color: #f2f2f2;
+  margin-bottom: 60px;
+}
+.location-wrapper {
+  display: flex;
+}
+.location-wrapper-info {
+  display: flex;
+  flex-direction: column;
+}
+.location-wrapper-info__svg {
+  margin-right: 15px;
+}
+.location-wrapper-info-group {
+  display: flex;
+  margin-bottom: 15px;
+}
+.location-wrapper-info-group__title {
+  font-family: "Raleway-Bold", sans-serif;
+  font-size: 33px;
+  color: #f2f2f2;
+}
+.location-wrapper-info-group__text {
+  font-family: "Manrope-Medium", sans-serif;
+  font-size: 18px;
+  color: #f2f2f2;
+  margin-left: 45px;
+}
+.location-wrapper-info__text {
+  font-family: "Manrope-Medium", sans-serif;
+  font-size: 18px;
+  color: #f2f2f2;
+  margin-left: 45px;
+}
+.location-wrapper-info__text--br {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.location-wrapper-info__text--mb {
+  margin-bottom: 45px;
+}
+.location-wrapper-info-social {
+  margin-top: 50px;
+}
+.location-wrapper-info-social__media {
+  cursor: pointer;
+  margin-left: 45px;
+}
+.location-wrapper-info-social__media--ml {
+  margin-left: 15px;
 }
 
 @media screen and (min-width: 768px) {
@@ -953,7 +1060,8 @@ section {
   }
   .technology-wrapper__img {
     width: 50%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .technology-wrapper-right {
     width: 40%;
@@ -1018,7 +1126,8 @@ section {
   .about__image {
     max-width: 355px;
     max-height: 440px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .about__text {
     margin-top: 10px;
@@ -1146,6 +1255,18 @@ section {
   }
   .discover-form__title {
     font-size: 26px;
+  }
+  .products-title {
+    font-size: 28px;
+  }
+  .products-text {
+    font-size: 16px;
+  }
+  .products__image {
+    width: 60%;
+  }
+  .products-wrapper-right__svg {
+    left: 40%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1356,9 +1477,6 @@ section {
   .work__title {
     font-size: 24px;
   }
-  .work-info {
-    background-color: unset;
-  }
 }
 @media screen and (max-width: 675px) {
   .container {
@@ -1495,6 +1613,15 @@ section {
     padding: 9px 30px;
     margin-top: 10px;
   }
+  .products-title {
+    font-size: 24px;
+  }
+  .products-text {
+    font-size: 14px;
+  }
+  .products__image {
+    width: 60%;
+  }
 }
 @media screen and (max-width: 360px) {
   .header__logo {
@@ -1560,4 +1687,4 @@ section {
     border-radius: 5px;
     margin-bottom: 10px;
   }
-}
+}/*# sourceMappingURL=style.css.map */
